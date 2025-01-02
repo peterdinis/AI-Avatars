@@ -3,21 +3,21 @@ import { Button } from "~/components/ui/button";
 
 const HomepageWrapper: FC = () => {
   return (
-    <div className="flex h-full w-full items-center justify-center">
-      <header className="flex w-full justify-between p-4 px-10">
-        <div>
-            LOGO
+    <div className="flex h-full w-full flex-col items-center justify-center">
+        <div className="container">
+            <header className="flex w-full justify-between py-4 px-10">
+                <div>
+                    LOGO
+                </div>
+                <div>MENU</div>
+            </header>
+            <div className="m-10 flex flex-col space-y-4">
+                <h1 className="text-4xl font-bold">AI Avatars</h1>
+                <Button variant={"default"} size={"lg"}>
+                    Create your own AI Avatars now
+                </Button>
+            </div>
         </div>
-        <div>
-            MENU
-        </div>
-      </header>
-      <div className="flex flex-col space-y-4">
-        <h1 className="text-3xl font-bold">Generate AI Avatars</h1>
-        <Button variant={"default"} size={"lg"}>
-          Create own avatar right now
-        </Button>
-      </div>
     </div>
   );
 };
