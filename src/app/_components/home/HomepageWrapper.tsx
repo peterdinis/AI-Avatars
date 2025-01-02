@@ -1,5 +1,7 @@
 import { FC } from "react";
 import { Button } from "~/components/ui/button";
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "~/components/ui/dialog";
+import { Input } from "~/components/ui/input";
 
 const HomepageWrapper: FC = () => {
     return (
@@ -21,9 +23,23 @@ const HomepageWrapper: FC = () => {
                         </p>
                     </div>
                     <div className="my-12 w-full px-4">
-                        <Button variant={"default"} size={"lg"} className="w-full">
-                            Try now
-                        </Button>
+                        <Dialog>
+                            <DialogTrigger asChild>
+                                <Button variant={"default"} size={"lg"} className="w-full">
+                                    Try now
+                                </Button>
+                            </DialogTrigger>
+                            <DialogContent>
+                                <DialogHeader>
+                                    <DialogTitle>Complete authentification</DialogTitle>
+                                    <DialogDescription>Two authentification flows are here</DialogDescription>
+                                </DialogHeader>
+                                <form className="flex flex-col space-y-4">
+                                    <Input type={"text"} />
+                                    <Button type="submit" className="w-full">Verify your email</Button>
+                                </form>
+                            </DialogContent>
+                        </Dialog>
                     </div>
                 </div>
             </div>
