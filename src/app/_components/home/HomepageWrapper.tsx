@@ -12,7 +12,7 @@ const HomepageWrapper: FC = () => {
 
     return (
         <div className="flex h-full w-full flex-col items-center justify-center">
-            <div className="fixed inset-0 -z-10 bg-gradient-to-br from-fuchsia-200 via-slate-50 to-red-300"></div>
+            <div className="fixed inset-0 -z-10 bg-gradient-to-br from-fuchsia-200 via-slate-50 to-red-300 dark:from-purple-700 dark:via-gray-900 dark:to-red-600"></div>
             <div className="container mx-auto">
                 <Navigation />
                 <div className="m-10 flex flex-col items-center justify-center">
