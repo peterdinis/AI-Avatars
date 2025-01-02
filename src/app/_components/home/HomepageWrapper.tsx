@@ -1,28 +1,20 @@
-"use client"
+"use client";
 
 import { FC, useState } from "react";
-import { Avatar, AvatarFallback } from "~/components/ui/avatar";
 import { Button } from "~/components/ui/button";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "~/components/ui/dialog";
 import { Input } from "~/components/ui/input";
 import { FaGoogle } from "react-icons/fa";
-
+import Navigation from "../shared/Navigation";
 
 const HomepageWrapper: FC = () => {
     const [email, setEmail] = useState("");
+
     return (
         <div className="flex h-full w-full flex-col items-center justify-center">
             <div className="fixed inset-0 -z-10 bg-gradient-to-br from-fuchsia-200 via-slate-50 to-red-300"></div>
             <div className="container mx-auto">
-                <header className="flex w-full max-w-screen-2xl justify-between bg-transparent py-10 px-10 mx-auto">
-                    <div className="flex items-center gap-2">
-                        <Avatar>
-                            <AvatarFallback>AI</AvatarFallback>
-                        </Avatar>
-                        <span>Avatars</span>
-                    </div>
-                   <div>Menu</div>
-                </header>
+                <Navigation />
                 <div className="m-10 flex flex-col items-center justify-center">
                     <div className="bg-clip-text text-center text-5xl font-semibold leading-snug">
                         <p>
@@ -44,7 +36,13 @@ const HomepageWrapper: FC = () => {
                                     <DialogDescription>Two authentification flows are here</DialogDescription>
                                 </DialogHeader>
                                 <form onSubmit={(e) => e.preventDefault()} className="flex flex-col space-y-4">
-                                    <Input value={email} onChange={(e) => setEmail(e.target.value)} type={"email"} required placeholder="john@doe.com" />
+                                    <Input
+                                        value={email}
+                                        onChange={(e) => setEmail(e.target.value)}
+                                        type={"email"}
+                                        required
+                                        placeholder="john@doe.com"
+                                    />
                                     <Button type="submit" className="w-full">Verify your email</Button>
                                 </form>
                                 <p className="w-full text-center font-bold">OR</p>

@@ -2,6 +2,7 @@ import "~/styles/globals.css";
 import { type Metadata } from "next";
 import { TRPCReactProvider } from "~/trpc/react";
 import { Toaster } from "~/components/ui/toaster";
+import ThemeProvider from "./_components/shared/ThemeProvider";
 
 export const metadata: Metadata = {
   title: "AI Avatars",
@@ -16,8 +17,10 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <TRPCReactProvider>
+          <ThemeProvider attribute={"class"}>
             {children}
             <Toaster />
+          </ThemeProvider>
         </TRPCReactProvider>
       </body>
     </html>
