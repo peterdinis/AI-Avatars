@@ -1,6 +1,8 @@
 "use client"
 
 import { FC, useState } from "react";
+import { FC } from "react";
+import { Avatar, AvatarFallback } from "~/components/ui/avatar";
 import { Button } from "~/components/ui/button";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "~/components/ui/dialog";
 import { Input } from "~/components/ui/input";
@@ -13,8 +15,11 @@ const HomepageWrapper: FC = () => {
             <div className="fixed inset-0 -z-10 bg-gradient-to-br from-fuchsia-200 via-slate-50 to-red-300"></div>
             <div className="container mx-auto">
                 <header className="flex w-full max-w-screen-2xl justify-between bg-transparent py-10 px-10 mx-auto">
-                    <div>
-                        LOGO
+                    <div className="flex items-center gap-2">
+                        <Avatar>
+                            <AvatarFallback>AI</AvatarFallback>
+                        </Avatar>
+                        <span>Avatars</span>
                     </div>
                     <div>MENU</div>
                 </header>
