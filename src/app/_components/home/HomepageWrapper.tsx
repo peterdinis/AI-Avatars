@@ -1,11 +1,7 @@
 import { FC } from "react";
 
 const HomepageWrapper: FC = () => {
-    return (
-        <>
-        aaaaa
-        </>
-    )
-}
+  return <>aaaaa</>;
+};
 
-export default HomepageWrapper
+export default HomepageWrapper;
