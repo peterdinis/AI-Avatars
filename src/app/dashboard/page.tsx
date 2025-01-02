@@ -1,11 +1,8 @@
 import { NextPage } from "next";
+import DashboardWarpper from "../_components/dashboard/DashboardWrapper";
 
 const DashboardPage: NextPage = () => {
-    return (
-        <>  
-            Dashboard
-        </>
-    )
+    return <DashboardWarpper />
 }
 
 export default DashboardPage;
