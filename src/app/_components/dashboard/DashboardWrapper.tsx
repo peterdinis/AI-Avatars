@@ -1,6 +1,7 @@
 "use client"
 
-import { FC} from "react";
+import { FC } from "react";
+import { UploadButton } from "~/app/_utils/uploadthing";
 import { Avatar, AvatarFallback } from "~/components/ui/avatar";
 
 const DashboardWarpper: FC = () => {
@@ -23,9 +24,21 @@ const DashboardWarpper: FC = () => {
                             Dashboard
                         </p>
                     </div>
-                    <div className="mt-10">
-                        Uploader
-                    </div>
+                    <main>
+                        <UploadButton
+                            className="rounded-xl border-dashed flex items-center justify-center"
+                            endpoint="imageUploader"
+                            onClientUploadComplete={(res) => {
+                                // Do something with the response
+                                console.log("Files: ", res);
+                                alert("Upload Completed");
+                            }}
+                            onUploadError={(error: Error) => {
+                                // Do something with the error.
+                                alert(`ERROR! ${error.message}`);
+                            }}
+                        />
+                    </main>
                 </div>
                 <div className="mt-20">
                     Displaying Images
