@@ -6,9 +6,13 @@ import { Button } from "~/components/ui/button";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "~/components/ui/dialog";
 import { Input } from "~/components/ui/input";
 import { FaGoogle } from "react-icons/fa";
+import { SignInButton, UserButton, useUser } from "@clerk/nextjs";
+import Link from "next/link";
+
 
 const HomepageWrapper: FC = () => {
     const [email, setEmail] = useState("");
+    const { user } = useUser();
     return (
         <div className="flex h-full w-full flex-col items-center justify-center">
             <div className="fixed inset-0 -z-10 bg-gradient-to-br from-fuchsia-200 via-slate-50 to-red-300"></div>
@@ -20,7 +24,19 @@ const HomepageWrapper: FC = () => {
                         </Avatar>
                         <span>Avatars</span>
                     </div>
-                    <div>MENU</div>
+                    {!user ? (
+                        <div>
+                            <Link href="/sign-in">
+                                <Button variant={"link"}>
+                                    Sign In
+                                </Button>
+                            </Link>
+                        </div>
+                    ) : (
+                        <div>
+                            <UserButton />
+                        </div>
+                    )}
                 </header>
                 <div className="m-10 flex flex-col items-center justify-center">
                     <div className="bg-clip-text text-center text-5xl font-semibold leading-snug">
