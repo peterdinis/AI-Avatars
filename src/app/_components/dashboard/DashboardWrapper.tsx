@@ -24,7 +24,7 @@ const DashboardWarpper: FC = () => {
                             Dashboard
                         </p>
                     </div>
-                    <main className="flex min-h-screen flex-col items-center justify-between m-3">
+                    <main>
                         <UploadButton
                             className="rounded-xl border-dashed flex items-center justify-center"
                             endpoint="imageUploader"
