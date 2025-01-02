@@ -5,7 +5,7 @@ import { Toaster } from "~/components/ui/toaster";
 
 export const metadata: Metadata = {
   title: "AI Avatas",
-  description: "Generate your ai avatar here",
+  description: "Generate your ai avatars here",
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
 
