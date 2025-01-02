@@ -2,6 +2,7 @@
 
 import { FC } from "react";
 import { Avatar, AvatarFallback } from "~/components/ui/avatar";
+import ModeToggle from "./ModeToggle";
 
 const Navigation: FC = () => {
     return (
@@ -12,7 +13,7 @@ const Navigation: FC = () => {
                 </Avatar>
                 <span>Avatars</span>
             </div>
-            <div>Menu</div>
+            <ModeToggle />
         </header>
     );
 };
