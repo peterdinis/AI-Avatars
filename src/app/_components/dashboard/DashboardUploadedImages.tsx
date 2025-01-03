@@ -6,7 +6,7 @@ import { Card, CardContent } from "~/components/ui/card";
 import {
     Pagination,
     PaginationContent,
-    PaginationEllipsis,
+    PaginationEllipsis, 
     PaginationItem,
     PaginationLink,
     PaginationNext,
