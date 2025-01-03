@@ -3,6 +3,7 @@
 import { FC } from "react";
 import { UploadButton } from "~/app/_utils/uploadthing";
 import Navigation from "../shared/Navigation";
+import DashboardUploadedImages from "./DashboardUploadedImages";
 
 const DashboardWrapper: FC = () => {
   return (
@@ -30,7 +31,9 @@ const DashboardWrapper: FC = () => {
             />
           </main>
         </div>
-        <div className="mt-20">Displaying Images</div>
+        <div className="mt-20">
+          <DashboardUploadedImages />
+        </div>
       </div>
     </div>
   );
